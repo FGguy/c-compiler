@@ -6,8 +6,8 @@ pub struct Compiler<'a> {
     _flags: &'a cli::CompilationFlags,
 }
 
-impl Compiler<'_> {
-    pub fn new<'a>(flags: &'a cli::CompilationFlags) -> Compiler<'a> {
+impl<'a> Compiler<'a> {
+    pub fn new(flags: &'a cli::CompilationFlags) -> Compiler<'a> {
         Compiler { _flags: flags }
     }
 
